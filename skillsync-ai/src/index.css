@@ -1,0 +1,61 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  :root {
+    --font-display: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    --font-sans: 'DM Sans', system-ui, -apple-system, sans-serif;
+    --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, monospace;
+    --zyra-bg: #F6F9F7;
+    --zyra-surface: #FFFFFF;
+    --zyra-mint: #EDF4EF;
+    --zyra-border: #DCE5DF;
+    --zyra-accent: #2D6A4F;
+  }
+
+  .dark {
+    --zyra-bg: #0E1311;
+    --zyra-surface: #151C18;
+    --zyra-mint: #1A241F;
+    --zyra-border: #25302A;
+    --zyra-accent: #40916C;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    background-color: var(--zyra-bg);
+    color: #18221D;
+  }
+
+  .dark body {
+    color: #ECF2EE;
+  }
+
+  h1, h2, h3, h4, .font-display {
+    font-family: var(--font-display);
+  }
+
+  code, pre, .font-mono {
+    font-family: var(--font-mono);
+  }
+}
+
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+button, [role="button"], select {
+  transition-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+button:active:not(:disabled) {
+  transform: scale(0.985);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

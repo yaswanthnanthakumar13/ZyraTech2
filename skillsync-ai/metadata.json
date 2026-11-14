@@ -1,0 +1,8 @@
+{
+  "name": "SkillSync AI",
+  "description": "AI-Powered Career Intelligence and Adaptive Learning Ecosystem. Discover Your Potential. Bridge Your Skill Gaps. Build Your Future.",
+  "requestFramePermissions": ["camera", "microphone"],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
